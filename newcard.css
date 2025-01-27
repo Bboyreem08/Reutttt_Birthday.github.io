@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { min-height: 100vh; }
+
+body
+{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+p{
+  font-size: 20px;
+}
+.card{
+    position: absolute;
+    width: 450px;
+    height: 700px;
+    left: 60%;
+    top: 50%;
+    margin-top: -350px;
+    margin-left: -295px;
+    align-items: center;
+	box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+
+}
+.card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+    backface-visibility: hidden;
+    background-size: contain;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transition: all 0.8s ease-in-out;
+}
+/* 
+.card:hover .front{
+
+    transform: rotateY(170deg);
+    
+} */
+.card .text-container{
+    width: 100%;
+    height: 100%;  
+    border: 5px solid;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5) 1; 
+    
+}
+.text-container h1{
+    text-align: center;
+    color: gold;
+    font-size: x-large;
+    font-family: "Delius Swash Caps", serif; 
+    
+
+}
+.text-container p{
+  color: gold;
+  font-size: 14.5px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;  
+}
+.st{
+  direction: rtl;
+}
+.text-container{
+    background: linear-gradient(to top right, #359d93, #FA66AE);
+}
+.arrows{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 222px;
+    left: 50%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.arrows2{
+  position: absolute;
+  top: 50%;
+  margin-top: 20px;
+  margin-left: 222px;
+  left: 50%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrows2 button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: .5s;
+}
+.arrows2 button:hover{
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* 
+.card:hover .back {
+    transform: rotateY(-170deg);
+    background: url("image/img8.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} */
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5) 1;
+    backface-visibility: visible;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transition: all 0.8s ease-in-out;
+
+}
+
+
+
+.switch {
+    top: 10px;
+    left: 10px;
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 44px;
+  
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+    color: green;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    color: green;
+
+  }
+  
+  input:checked + .slider:before {
+  
+    color: green;
+    transform: translateX(26px);
+    content:"on";
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+    line-height: 36px;
+  
+    
+  
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+    content:"off";
+    text-align: center;
+  
+  
+   }    
+
